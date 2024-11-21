@@ -11,7 +11,19 @@
     <mat-error>Name must be at least 3 characters long.</mat-error>
     }
   </mat-form-field>
-
+  <br />
+  <mat-form-field>
+    <mat-label>Number of Visits</mat-label>
+    <input
+      matInput
+      placeholder="Number of Visits"
+      formControlName="numberOfVisits"
+      required
+    />
+    @if (numberOfVisits.invalid) {
+    <mat-error>Please enter a number</mat-error>
+    }
+  </mat-form-field>
   <br />
   <button
     mat-raised-button
@@ -19,6 +31,8 @@
     type="submit"
     [disabled]="countryForm.invalid"
   >
-    Add
+    Add Country
   </button>
 </form>
+<br />
+<button mat-raised-button color="primary" [routerLink]="['/']">Home</button>

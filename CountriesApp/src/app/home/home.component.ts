@@ -24,7 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   countries$ = {} as WritableSignal<Countrylocations[]>;
-  displayedColumns: string[] = ['col-name', 'col-action'];
+  displayedColumns: string[] = ['col-name', 'col-num', 'col-action'];
 
   constructor(private countriesService: CountriesService) {}
 
