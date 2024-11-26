@@ -31,7 +31,7 @@ async function applySchemaValidation(db: mongodb.Db) {
         _id: {},
         name: {
           bsonType: 'string',
-          description: "'name' is required",
+          description: "'Name' is required",
         },
         numberOfVisits: {
           bsonType: 'number',

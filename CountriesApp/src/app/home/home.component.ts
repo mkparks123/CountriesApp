@@ -50,4 +50,8 @@ export class HomeComponent implements OnInit {
     this.countries$ = this.countriesService.countries$;
     this.countriesService.getCountries();
   }
+
+  countryInfo(id: string): void {
+    this.router.navigate(['/info', { id }]);
+  }
 }
